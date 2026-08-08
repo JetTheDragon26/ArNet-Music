@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ARNet Music</title>
+
+  <link rel="stylesheet" href="station.css">
+</head>
+
+<body>
+
+  <div class="station-shell">
+
+    <!-- =========================================================
+         ARNET MUSIC HEADER
+    ========================================================== -->
+
+    <header class="station-header">
+
+      <div>
+        <h1>ARNet Music</h1>
+        <p class="subtitle">ARNet Music Broadcast Service</p>
+      </div>
+
+      <div class="on-air">
+        <span class="on-air-light"></span>
+        ON AIR
+      </div>
+
+    </header>
+
+
+    <!-- =========================================================
+         STATION INFORMATION
+    ========================================================== -->
+
+    <section class="station-info">
+
+      <div class="info-item">
+        <span class="label">SERVICE</span>
+        <span class="value">ARNet Music</span>
+      </div>
+
+      <div class="info-item">
+        <span class="label">CHANNEL</span>
+        <span class="value">ARM-001</span>
+      </div>
+
+      <div class="info-item">
+        <span class="label">SOURCE</span>
+        <span class="value" id="sourceText">YouTube Program Feed</span>
+      </div>
+
+      <div class="info-item">
+        <span class="label">STATUS</span>
+        <span class="value online" id="statusText">ONLINE</span>
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         NOW PLAYING
+    ========================================================== -->
+
+    <section class="now-playing">
+
+      <div class="now-playing-label">
+        NOW PLAYING
+      </div>
+
+      <div id="trackTitle" class="track-title">
+        Connecting to ARNet Music...
+      </div>
+
+      <div id="trackInfo" class="track-info">
+        Program feed initializing
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         VISUAL AUDIO DISPLAY
+    ========================================================== -->
+
+    <section class="signal-panel">
+
+      <div class="signal-header">
+
+        <span>AUDIO ACTIVITY</span>
+
+        <span id="signalStatus">
+          RECEIVING
+        </span>
+
+      </div>
+
+
+      <div class="audio-bars">
+
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+        <div class="audio-bar"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         YOUTUBE PLAYER
+
+         This is intentionally visually minimized.
+
+         The dashboard listener is supposed to receive the station,
+         not control the station.
+    ========================================================== -->
+
+    <div id="youtube-container">
+
+      <div id="youtube-player"></div>
+
+    </div>
+
+
+    <!-- =========================================================
+         RECEIVER CONTROLS
+
+         Volume / mute are receiver-side controls.
+         There is intentionally NO skip or pause control.
+    ========================================================== -->
+
+    <section class="receiver-controls">
+
+      <div class="control-title">
+        RECEIVER AUDIO
+      </div>
+
+
+      <div class="volume-row">
+
+        <button
+          id="muteButton"
+          type="button"
+          aria-label="Mute ARNet Music"
+        >
+          MUTE
+        </button>
+
+
+        <input
+          id="volumeSlider"
+          type="range"
+          min="0"
+          max="100"
+          value="70"
+          aria-label="ARNet Music volume"
+        >
+
+
+        <span id="volumeValue">
+          70%
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         LINK INFORMATION
+    ========================================================== -->
+
+    <section class="link-status">
+
+      <div>
+
+        <span class="label">
+          ARNET LINK
+        </span>
+
+        <span class="value online">
+          CONNECTED
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <span class="label">
+          PROGRAM
+        </span>
+
+        <span class="value">
+          MUSIC
+        </span>
+
+      </div>
+
+
+      <div>
+
+        <span class="label">
+          CHANNEL ID
+        </span>
+
+        <span class="value">
+          ARM-001
+        </span>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+
+    <footer>
+
+      ARNet Music Network
+
+      <span class="footer-dot">•</span>
+
+      Continuous Broadcast Service
+
+    </footer>
+
+  </div>
+
+
+  <!-- ===========================================================
+       YOUTUBE IFRAME API
+  ============================================================ -->
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+
+  <script src="station.js"></script>
+
+</body>
+</html>
