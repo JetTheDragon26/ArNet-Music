@@ -1,0 +1,39 @@
+{
+  "station": {
+    "name": "ARNet Music Network",
+    "shortName": "ARNet Music",
+    "type": "music_broadcast",
+    "network": "ARNet",
+    "status": "on_air"
+  },
+
+  "channel": {
+    "base": 6500,
+    "mode": "FCS",
+    "center": 6500.50,
+    "unit": "Vt",
+
+    "occupiedRange": {
+      "low": 6500.00,
+      "high": 6500.99
+    }
+  },
+
+  "source": {
+    "type": "youtube",
+    "playlistId": "PLNTEvGVYDjho"
+  },
+
+  "receiver": {
+    "defaultVolume": 70,
+    "allowMute": true,
+    "allowPause": false,
+    "allowSkip": false
+  },
+
+  "broadcast": {
+    "continuous": true,
+    "format": "music",
+    "serviceName": "ArNet Music Network"
+  }
+}
